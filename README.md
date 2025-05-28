@@ -1,4 +1,3 @@
-````markdown
 # 📋 Task Manager Fullstack App
 
 A fullstack task management application built with **React**, **Node.js**, and **PostgreSQL**. Users can create, update, and delete tasks through a sleek and responsive interface.
