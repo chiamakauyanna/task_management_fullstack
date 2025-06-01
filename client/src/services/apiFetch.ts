@@ -1,6 +1,7 @@
 import axios from "axios";
 import type { NewTask } from "../interfaces/context";
-const BASE_URL = "http://localhost:5000/tasks";
+
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 export const retrieveTasks = async () => {
   try {
@@ -23,7 +24,7 @@ export const retrieveTasksById = async (id: number) => {
 export const createTask = async (taskData: NewTask) => {
   try {
     const response = await axios.post(BASE_URL, taskData);
-    console.log("Task created sucessfully", response.data);
+    console.log("Task created successfully", response.data);
     return response.data;
   } catch (error) {
     console.error("task creation error", error);
